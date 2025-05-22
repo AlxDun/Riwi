@@ -1,32 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Alberto</title>
+    <title>Portafolio de ALBERTO</title>
 </head>
 <body>
-    <h1>Alberto Jimenez - Riwi Developer</h1>
-    <section>
-        <h2>Sobre mi</h2>
-        <p>Hola, me llamo Alberto.</p>
-        <p>Me apasiona mucho lo que es la musica y la programacion.</p>
-        <p>Mas sobre mi...</p>
-        <img src="./images/YO.jpg" alt="Foto de Alberto" width="200">
-        <ul>
-            <li>Python</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Genio absoluto</li>
-        </ul>
-    </section>
-    <section>
-        <article>
-            <h2>Proyectos</h2>
-            <h3>Proyecto 1: Sistema de gestion de inventario</h3>
-            <p>Un proyecto en python que puede ser utilizado para gestionar el inventario de cualquier negocio.</p>
-            <img src="./images/SDGDI.png" alt="Sistema de gestion de inventario" width="300">
-        </article>
-    </section>
-</body>
-</html>
+    <div>
+        <header>
+            <h1>Alberto Alexander Jimenez Urruchurto</h1>
+            </header>
+
+        <nav>
+            <ul>
+                <li><a href="#presentacion">Presentación</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <section id="presentacion">
+            <h2>Acerca de mí</h2>
+            <img src="./assets/YO.jpg" alt="Foto de perfil de Alberto" width="150">
+            <p>Hola, mi nombre es Alberto y soy Coder en Riwi. Me apasiona la musica y la programacion.</p>
+            <p>He trabajado en diversos proyectos propios que me han permitido desarrollar mis habilidades. Siempre estoy buscando nuevos desafíos y oportunidades para crecer profesionalmente.</p>
+        </section>
+
+        <section id="habilidades">
+            <h2>Mis Habilidades Técnicas</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Genio absoluto</li>
+            </ul>
+        </section>
+
+        <section id="proyectos">
+            <h2>Mis Proyectos</h2>
+            
+            <h3>Sistema de gestion de inventario</h3>
+            <p>Un sistema que se ejecuta a traves de la consola que ayuda a gestianar el inventario de cualquier negocio.</p>
+            
+            <img src="./assets/SDGDI.png" alt="Sistema de gestion de inventario" width="400">
+            <h3>Calificaciones y estadisticas</h3>
+            <p>Un sistema que a traves de la consola puede gestionar una lista de calificaciones.</p>
+
+            <h3>Listado de Proyectos</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre del Proyecto</th>
+                        <th>Tecnologías Usadas</th>
+                        <th>Enlace</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema de gestion de inventario</td>
+                        <td>Python</td>
+                        <td><a href="https://github.com/AlxDun/Riwi/blob/master/Desarrollo/Modulo%201/Prueba%20de%20desempeño/Alberto%20Jimenez%20-%20Prueba%20de%20desempeño%20-%20Modulo%201.py" target="_blank">Ver Proyecto</a></td>
+                        </tr>
+                    <tr>
+                        <td>Calificaciones y estadisticas</td>
+                        <td>Python</td>
+                        <td><a href="https://github.com/AlxDun/Riwi/blob/master/Desarrollo/Modulo%201/Semana%202/Alberto%20Jimenez%20-%20Entrenamiento%20Modulo%201%20-%20Semana%202.py" target="_blank">Ver Proyecto</a></td>
+                    </tr>
+                    <tr>
+                        <td>Portafolio</td>
+                        <td>HTML5, CSS3</td>
+                        <td><a href="./ccc.html" target="_blank">Ver Proyecto</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form action="[URL_de_procesamiento_del_formulario]" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+                <button type="submit">Enviar Mensaje</button>
+                </form>
+        </section>
+
+        <section>
+            <h2>Mis Redes Sociales</h2>
+            <p>Conéctate conmigo en:</p>
+            <a href="https://github.com/AlxDun" target="_blank">GitHub</a>
+        </section>
