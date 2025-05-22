@@ -1,0 +1,5 @@
+print("Division")
+numero1=int(input("Escriba el primer digito: "))
+numero2=int(input("Escriba el segundo digito: "))
+if numero2==0: print("No se puede dividir entre 0")
+else: print("Su resultado es:", numero1/numero2)
