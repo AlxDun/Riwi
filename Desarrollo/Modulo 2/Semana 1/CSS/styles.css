@@ -1,0 +1,3 @@
+body, section, nav{display: flex; flex-direction: column; align-items: center; justify-content: space-around}/* En este apartado centro toda la pagina */
+table, th, td{border: 1px solid black}/* Con esto pongo los bordes de la tabla */
+img{border-radius: 5%;} /* Le agrego un borde redondeado a todas las imagenes */
