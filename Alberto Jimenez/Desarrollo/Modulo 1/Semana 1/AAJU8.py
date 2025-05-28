@@ -1,0 +1,6 @@
+print("Comparacion de dos numeros")
+numero1=int(input("Escriba el primer digito: "))
+numero2=int(input("Escriba el segundo digito: "))
+if numero1>numero2: print("El numero", numero1, "es mayor")
+elif numero1<numero2: print("El numero", numero2, "es mayor")
+else: print("Los numeros son iguales")

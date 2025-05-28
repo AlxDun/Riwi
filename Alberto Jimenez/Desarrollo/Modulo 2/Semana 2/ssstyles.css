@@ -1,0 +1,23 @@
+*{box-sizing: border-box;}
+.productos{display: flex;}
+.tarjeta.destacado{
+    border: 2px solid rgb(255, 0, 0);
+    background: #f2fae8;
+}
+.tarjeta.destacado p{color: purple;}
+.tarjeta{
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 20px;
+    background: #f5f5f5;
+    box-shadow: 10px 10px 10px black;
+    transition: 0.1s ;
+}
+p{color: blue;}
+button.cta:hover{cursor: pointer;}
+.tarjeta:hover{
+    cursor: default;
+    transform: scale(1.05);
+}

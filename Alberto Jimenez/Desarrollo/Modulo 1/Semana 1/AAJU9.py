@@ -1,0 +1,8 @@
+print("Mayor de tres numeros")
+numero1=int(input("Escriba el primer digito: "))
+numero2=int(input("Escriba el segundo digito: "))
+numero3=int(input("Escriba el tercer digito: "))
+if numero1>numero2 and numero1>numero3: print("El numero", numero1, "es mayor")
+elif numero2>numero1 and numero2>numero3: print("El numero", numero2, "es mayor")
+elif numero3>numero1 and numero3>numero2: print("El numero", numero3, "es mayor")
+else: print("Hay algunos numeros iguales")
