@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    transition: 0.25s;
+}
+
+body,
+header,
+section,
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    background-image: url(./assets/records.jpg);
+    background-attachment: fixed;
+}
+
+header {
+    width: 90%;
+    border-radius: 30px;
+    background-color: white;
+    position: sticky;
+    top: 1%;
+    animation: bounce 3s infinite;
+    box-shadow: 0 0 50px #FDCEDF;
+}
+
+h1 {
+    color: #BE5985;
+}
+
+h2,
+h3 {
+    color: #EC7FA9;
+}
+
+p {
+    color: #F2BED1;
+}
+
+h1,
+h2,
+h3,
+p:hover {
+    cursor: default;
+}
+
+.album {
+    width: 200px;
+    border-radius: 10%;
+    box-shadow: 0 0 50px #FDCEDF;
+}
+
+.album:hover {
+    transform: scale(1.25) rotate(5deg);
+    cursor: pointer;
+}
+
+.album:active {
+    transform: scale(7.5);
+
+}
+
+.tarjeta {
+    width: 150%;
+    border-radius: 50px;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1.05, 0.95);
+    }
+
+    50% {
+        transform: scale(0.95, 1.05);
+    }
+
+    100% {
+        transform: scale(1.05, 0.95);
+    }
+}
