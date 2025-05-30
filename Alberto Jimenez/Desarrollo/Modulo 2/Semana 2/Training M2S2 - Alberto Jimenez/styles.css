@@ -1,0 +1,35 @@
+* {box-sizing: border-box; transition: 0.25s; text-align: center;}/* Estilos que vamos a aplicar a todo el documento */
+
+a{text-decoration: none;} /* Le quitamos el subrayado a todo el texto de las etiquetas a */
+
+body, header, section, article, div {display: flex; flex-direction: column; align-items: center;} /* Aplicamos la tecnologia flex a varios elementos del documento, los ponemos verticalmente y lo centramos */
+
+body {background-image: url(./assets/records.jpg); background-attachment: fixed;} /* Le añadimos una imagen de fondo a la pagina y la dejamos fija */
+
+header {font-size: 125%; width: 90%; border-radius: 30px; background-color: white; position: sticky; top: 1%; animation: bounce 2s infinite; box-shadow: 0 0 50px #FDCEDF;} /* Le añadimos todos los estilos a el header */
+
+h1 {color: #BE5985;} /* Le ponemos un color a el h1 que seria el titulo principal que va dentro del header */
+
+h2 {text-align: center; color: #EC7FA9; background-color: white; width: 100%; box-shadow: 0 0 50px #FDCEDF; border-radius: 50px;} /* Le añadimos los estilos correspondientes al h2 */
+
+h3 {color: #EC7FA9;}/* Le ponemos color al h3 */
+
+p {color: #F2BED1;} /* Le añadimos color a cada una de las etiquetas p */
+
+h1, h2, footer, p:hover {cursor: default;} /* Le añadimos la propiedad hover a el h1, p2 y p para que el cursor se mantenga por defecto cuando se le pasa por encima */
+
+h3:hover{color: #BE5985} /* Le añadimos la propiedad hover a los h3 para que cambien de color al pasarle el cursor*/
+
+footer{font-size: 150%; color: #EC7FA9 ; display: flex; justify-content: center; width: 5.5%; background-color: white; border-radius: 50px; position: fixed; left: 1%; bottom: 1%; animation: bounce 0.5s infinite;} /* Le añadimos los estilos correspondientes al footer */
+
+.artist:hover{color: #BE5985; cursor: pointer;}/* Propiedad hover para cada uno de los elementos con la clase "artist", y que cambie el color al pasarles el cursor */
+
+.album {width: 300px; border-radius: 10%; box-shadow: 0 0 50px #FDCEDF; margin-bottom: 25%; margin-top: 10%;} /* Estilos correspondientes a cada una de las portadas de los albumes */
+
+.album:hover { transform: scale(1.25) rotate(5deg); cursor: pointer;} /* Propiedad hover para que al pasar el cursor sobre las portadas de los albumes, aumenten tamaño y roten un poco */
+
+.album:active {transform: scale(7.5);} /* Propiedad active para que al dar clic a la portada del album se haga un efecto de transicion a el Spotify del album */
+
+.tarjeta {background-color: white; width: 150%; border-radius: 50px; margin-bottom: 10%; box-shadow: 0 0 50px #FDCEDF;} /* Le añadimos los estilos caracteristicos a todos los elementos con la clase "tarjeta" los cuales son cada uno de los articulos que contienen la informacion de los discos */
+
+@keyframes bounce {0% {transform: scale(1.05, 0.95);} 50% {transform: scale(0.95, 1.05);} 100% {transform: scale(1.05, 0.95);}} /* Animacion Keyframes que se le aplicará al footer y al header */
