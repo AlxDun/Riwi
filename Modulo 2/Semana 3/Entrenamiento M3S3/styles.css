@@ -1,0 +1,143 @@
+/* Estilos globales */
+*{
+    transition: 0.25s; /* Aplica una transición suave a todas las propiedades para efectos de hover */
+    text-align: center; /* Centra el texto por defecto en todos los elementos */
+    scroll-behavior: smooth; /* Hace que el desplazo en la pagina a traves de la seccion de navegacion sea suave */
+}
+
+body{
+    background-color: #e43c2f; /* Color de fondo principal para toda la página */
+}
+
+body img{
+    border-radius: 2.5rem; /* Bordes redondeados para todas las imágenes en el body por defecto */
+}
+
+/* Estilos del encabezado */
+header{
+    background-color: black; /* Fondo negro para el encabezado */
+    color: #e43c2f; /* Color de texto del encabezado */
+    border-radius: 2.5rem; /* Bordes redondeados para el encabezado */
+}
+
+h1{
+    padding-top: 2.5rem; /* Espacio superior para el título principal */
+}
+
+h2, h3{
+    margin-top: 5rem; /* Margen superior para los títulos de sección y subsección */
+}
+
+header div img{
+    width: 5rem; /* Ancho del logo en el encabezado */
+    border-radius: 5rem; /* Logo circular */
+}
+
+header div nav{
+    display: flex; /* Habilita Flexbox para la navegación */
+    flex-direction: row; /* Elementos de navegación en fila */
+    justify-content: space-around; /* Distribuye el espacio uniformemente entre los elementos */
+}
+
+header div a{
+    border: #e43c2f solid; /* Borde rojo para los enlaces de navegación */
+    border-radius: 1rem; /* Bordes redondeados para los enlaces */
+    width: 10rem; /* Ancho fijo para cada botón de navegación */
+    color: #e43c2f; /* Color de texto de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    margin: 1rem; /* Margen alrededor de los enlaces */
+    margin-bottom: 2.5rem; /* Margen inferior adicional */
+}
+
+/* Efectos de hover para los enlaces del encabezado */
+header div a:hover{
+    background-color: #e43c2f; /* Cambio de fondo al pasar el ratón */
+    border: black solid; /* Cambio de color de borde */
+    color: black; /* Cambio de color de texto */
+    box-shadow: 0 0 0.5rem #e43c2f; /* Sombra para asemejar brillo al pasar el ratón */
+}
+
+/* Estilos de las imágenes principales de las secciones Introducción, Integrantes y Conclusión */
+#introduccion img, #integrantes img, #conclusion img{
+    width: 50rem; /* Ancho de las imágenes principales */
+    box-shadow: 0 0 2.5rem black; /* Sombra para las imágenes */
+    margin-top: 2.5rem; /* Margen superior */
+}
+
+/* Efecto de hover para las imágenes principales */
+#introduccion img:hover, #integrantes img:hover, #conclusion img:hover{
+    transform: rotate(1deg); /* Ligera rotación al pasar el ratón */
+}
+
+/* Estilos para las imágenes de los álbumes */
+.album img{
+    width: 25rem; /* Ancho de las imágenes de los álbumes */
+    box-shadow: 0 0 2.5rem black; /* Sombra para los álbumes */
+    margin-top: 1rem; /* Margen superior */
+}
+
+/* Efectos de hover y active para las imágenes de los álbumes */
+.album img:hover{
+    transform: rotate(5deg) scale(1.1); /* Rotación y escalado al pasar el ratón */
+}
+
+.album img:active{
+    transform: scale(5); /* Gran escalado al hacer clic */
+}
+
+/* Estilos para las imágenes de las redes sociales en el footer */
+.redes img{
+    border-radius: 5rem; /* Imágenes de redes sociales circulares */
+    margin: 4rem 1rem 4rem 1rem; /* Margen alrededor de las imágenes */
+    width: 2.5rem; /* Ancho de las imágenes de redes sociales */
+    box-shadow: 0 0 1rem black; /* Sombra */
+}
+
+/* Efecto de hover para las imágenes de redes sociales */
+.redes img:hover{
+    transform: scale(1.5); /* Escala las imágenes al pasar el ratón */
+}
+
+/* Estilos para pantallas de hasta 950px de ancho */
+@media (max-width: 950px){
+    main{
+        font-size: 0.75rem; /* Reduce el tamaño de fuente en el main */
+    } 
+
+    #introduccion img, #integrantes img, #conclusion img{
+        width: 25rem; /* Ajusta el ancho de las imágenes principales */
+    }
+
+    .album img{
+        width: 12rem; /* Ajusta el ancho de las imágenes de los álbumes */
+    }
+}
+
+/* Estilos para pantallas de hasta 500px de ancho */
+@media (max-width: 500px){
+    main{
+        font-size: 0.5rem; /* Reduce aún más el tamaño de fuente en el main */
+    }
+
+    body img{
+        border-radius: 1rem; /* Reduce el redondeo de bordes de imágenes */
+    }
+
+    header div nav{
+        flex-direction: column; /* Coloca los elementos de navegación en columna */
+        align-items: center; /* Centra los elementos de navegación horizontalmente */
+    }
+
+    header div a{
+        margin-bottom: 0; /* Elimina el margen inferior de los botones de navegacion */
+        margin: 0.5rem; /* Reduce todo el margin de los botones de navegacion a la mitad */
+    }
+
+    #introduccion img, #integrantes img, #conclusion img{
+        width: 12rem; /* Ajusta el ancho de las imágenes principales para móviles */
+    }
+
+    .album img{
+        width: 6rem; /* Ajusta el ancho de las imágenes de los álbumes para móviles */
+    }
+}

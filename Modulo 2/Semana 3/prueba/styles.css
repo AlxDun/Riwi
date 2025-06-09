@@ -1,0 +1,415 @@
+/* Reseteo básico para asegurar consistencia entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding y border en el ancho/alto total del elemento */
+}
+
+/* 1. Variables CSS para colores y tipografía */
+/* Define tus colores aquí. Puedes usar herramientas como coolors.co o paletton.com para generar paletas. */
+:root {
+    --color-primario: #3498db;     /* Azul brillante, para elementos principales y botones */
+    --color-secundario: #2c3e50;   /* Azul oscuro, para fondos o texto de contraste */
+    --color-acento: #e74c3c;       /* Rojo, para destacar algo o en estados de hover */
+    --color-fondo-claro: #ecf0f1;  /* Gris claro, para fondos de secciones */
+    --color-texto-oscuro: #34495e; /* Texto principal */
+    --color-texto-claro: #ecf0f1;  /* Texto sobre fondos oscuros */
+    --color-sombra-ligera: rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    --color-sombra-media: rgba(0, 0, 0, 0.2);   /* Sombra más pronunciada */
+
+    /* Fuentes personalizadas (ejemplo con Google Fonts) */
+    --fuente-principal: 'Roboto', sans-serif;
+    --fuente-secundaria: 'Montserrat', sans-serif;
+}
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: var(--fuente-principal);
+    line-height: 1.6;
+    color: var(--color-texto-oscuro);
+    background-color: var(--color-fondo-claro);
+    overflow-x: hidden; /* Evita el scroll horizontal en caso de desbordamiento */
+}
+
+/* Estilos para encabezados */
+h1, h2, h3 {
+    font-family: var(--fuente-secundaria);
+    color: var(--color-secundario);
+    margin-bottom: 0.8em;
+}
+
+h1 {
+    font-size: 2.8em;
+}
+
+h2 {
+    font-size: 2.2em;
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+/* Estilos para enlaces (por defecto) */
+a {
+    color: var(--color-primario);
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transición suave para el color del enlace */
+}
+
+a:hover {
+    color: var(--color-acento); /* Cambia de color al pasar el ratón */
+}
+
+/* Estilos para botones (clase general) */
+.btn {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: var(--color-texto-claro);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    border: none; /* Eliminar borde por defecto en botones */
+    cursor: pointer; /* Indicar que es clickeable */
+}
+
+.btn:hover {
+    background-color: var(--color-acento); /* Cambia de color al pasar el ratón */
+    transform: translateY(-2px); /* Ligeramente hacia arriba */
+    box-shadow: var(--color-sombra-ligera); /* Sombra sutil */
+}
+
+/* Secciones generales */
+section {
+    padding: 60px 20px;
+    margin-bottom: 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--color-secundario);
+    color: var(--color-texto-claro);
+    padding: 20px;
+    display: flex; /* Habilitamos Flexbox */
+    justify-content: space-between; /* Espacio entre el logo/título y la navegación */
+    align-items: center; /* Centra verticalmente los ítems */
+    box-shadow: var(--color-sombra-media);
+}
+
+header .logo {
+    font-family: var(--fuente-secundaria);
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+/* Navegación */
+nav ul {
+    list-style: none; /* Quita los puntos de la lista */
+    display: flex; /* Habilitamos Flexbox para los elementos de la lista */
+    gap: 25px; /* Espacio entre los elementos del menú */
+}
+
+nav ul li a {
+    color: var(--color-texto-claro);
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 0;
+    position: relative; /* Para el efecto de subrayado */
+}
+
+/* Efecto de subrayado en enlaces de navegación */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: var(--color-primario);
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease-in-out; /* Transición para el ancho */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* El subrayado se expande */
+}
+
+#presentacion {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-acento)); /* Fondo degradado */
+    color: var(--color-texto-claro);
+    text-align: center;
+    padding: 100px 20px; /* Más padding para que destaque */
+    display: flex; /* Usamos Flexbox para centrar contenido */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Altura mínima del 80% del viewport */
+}
+
+#presentacion h1 {
+    font-size: 3.5em;
+    color: var(--color-texto-claro);
+    margin-bottom: 0.2em;
+    text-shadow: 2px 2px 4px var(--color-sombra-media); /* Sombra al texto */
+}
+
+#presentacion p {
+    font-size: 1.4em;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+#portafolio {
+    background-color: white;
+    box-shadow: 0 0 15px var(--color-sombra-ligera); /* Sombra a la sección completa */
+}
+
+.proyectos-grid {
+    display: grid; /* Habilitamos CSS Grid */
+    /* Define columnas responsivas: auto-fit intentará encajar tantos elementos como quepan,
+       con un tamaño mínimo de 300px y máximo de 1fr (distribución igualitaria) */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Espacio entre los elementos de la cuadrícula */
+    padding: 20px;
+    max-width: 1200px; /* Limita el ancho del contenedor de proyectos */
+    margin: 0 auto; /* Centra el grid */
+}
+
+.proyecto {
+    background-color: var(--color-fondo-claro);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--color-sombra-ligera); /* Sombra inicial */
+    text-align: center;
+    overflow: hidden; /* Asegura que la imagen no se salga */
+
+    /* Transiciones para el efecto de hover */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.proyecto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease-in-out; /* Transición para la imagen dentro */
+}
+
+.proyecto h3 {
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+.proyecto p {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+/* Efectos al interactuar con elementos del portafolio (hover) */
+.proyecto:hover {
+    transform: translateY(-8px); /* Eleva ligeramente el proyecto */
+    box-shadow: var(--color-sombra-media); /* Sombra más pronunciada */
+}
+
+.proyecto:hover img {
+    transform: scale(1.05); /* Ligeramente más grande la imagen */
+}
+
+.proyecto .btn {
+    margin-top: 10px;
+}
+
+#contacto {
+    background-color: var(--color-secundario);
+    color: var(--color-texto-claro);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+#contacto h2 {
+    color: var(--color-texto-claro);
+}
+
+#contacto p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+#contacto form {
+    max-width: 600px;
+    margin: 0 auto 40px auto; /* Centra el formulario y añade espacio abajo */
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--color-sombra-media);
+    display: flex;
+    flex-direction: column; /* Apila los campos */
+    gap: 15px; /* Espacio entre los campos */
+}
+
+#contacto form label {
+    display: block; /* Asegura que la etiqueta esté en su propia línea */
+    text-align: left;
+    margin-bottom: 5px;
+    color: var(--color-texto-oscuro);
+    font-weight: bold;
+}
+
+#contacto form input[type="text"],
+#contacto form input[type="email"],
+#contacto form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: var(--fuente-principal);
+    transition: border-color 0.3s ease; /* Transición para el borde */
+}
+
+#contacto form input[type="text"]:focus,
+#contacto form input[type="email"]:focus,
+#contacto form textarea:focus {
+    border-color: var(--color-primario); /* Borde de color al enfocar */
+    outline: none; /* Elimina el contorno azul por defecto */
+}
+
+#contacto form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+#contacto form button {
+    width: 100%; /* El botón ocupa todo el ancho del formulario */
+    padding: 15px;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.redes-sociales {
+    display: flex; /* Flexbox para los enlaces de redes sociales */
+    justify-content: center; /* Centra los iconos */
+    gap: 25px; /* Espacio entre ellos */
+    margin-top: 20px;
+}
+
+.redes-sociales a {
+    color: var(--color-texto-claro);
+    font-size: 1.5em; /* Tamaño de los iconos (si usas Font Awesome) */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    color: var(--color-primario);
+    transform: scale(1.2); /* Efecto de escala al pasar el ratón */
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-secundario);
+    color: var(--color-texto-claro);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+/* Media Queries para diseño responsivo */
+
+/* --- Tablet (768px) --- */
+@media (max-width: 1023px) { /* Hasta 1023px, para tablets y móviles */
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    #presentacion {
+        padding: 80px 20px;
+        min-height: 60vh;
+    }
+
+    #presentacion h1 {
+        font-size: 2.8em;
+    }
+
+    #presentacion p {
+        font-size: 1.2em;
+    }
+
+    /* Navegación en tablet: podríamos quererla horizontal pero con menos espacio */
+    nav ul {
+        gap: 15px;
+    }
+
+    /* El grid de proyectos ya se adapta con auto-fit, pero podemos ajustar el minmax si queremos */
+    .proyectos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Un poco más pequeños */
+    }
+}
+
+
+/* --- Móvil (480px) --- */
+@media (max-width: 767px) { /* Hasta 767px, para móviles */
+    header {
+        flex-direction: column; /* Apila el logo/título y la navegación */
+        text-align: center;
+        padding: 15px;
+    }
+
+    header .logo {
+        margin-bottom: 15px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Los elementos del menú se apilan verticalmente */
+        gap: 10px;
+        padding: 0;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+        padding: 8px 0; /* Más espacio para los enlaces */
+    }
+
+    section {
+        padding: 40px 15px; /* Menos padding en secciones */
+    }
+
+    #presentacion {
+        padding: 60px 15px;
+        min-height: auto; /* No forzar altura en móviles */
+    }
+
+    #presentacion h1 {
+        font-size: 2em;
+    }
+
+    #presentacion p {
+        font-size: 1em;
+    }
+
+    .proyectos-grid {
+        grid-template-columns: 1fr; /* Una sola columna para los proyectos */
+        gap: 25px;
+    }
+
+    #contacto form {
+        padding: 20px; /* Menos padding en el formulario */
+    }
+
+    #contacto form button {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+
+    .redes-sociales {
+        gap: 15px; /* Menos espacio entre iconos */
+    }
+}
+
